@@ -75,5 +75,3 @@ impl UseDirective {
         None
     }
 }
-
-// ported from: src/js_parser/ast/UseDirective.zig

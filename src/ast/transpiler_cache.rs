@@ -17,9 +17,6 @@ pub struct RuntimeTranspilerCache {
     pub input_byte_length: Option<u64>,
     pub features_hash: Option<u64>,
     pub exports_kind: ExportsKind,
-    /// Set by `put()` / `get()` when a cache hit returns transpiled output.
-    /// Zig: `?bun.String` — bundler/parser only store/read the bytes; T6 owns
-    /// the `bun.String` wrapper when surfacing to JS.
     pub output_code: Option<Box<[u8]>>,
     /// Opaque storage for `bun_bundler::cache::RuntimeTranspilerCacheEntry` —
     /// the concrete type lives a tier up and is round-tripped via cast.
